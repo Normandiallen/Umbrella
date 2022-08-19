@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Umbrella</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" class="css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!--Frame-->
+      <div class="row">
+        <div class="col-5 fun">
+          <!--Header-->
+          <div class="header row">
+            <div class="col-9">
+             <button class="btn btn-primary" id = "geoBtn">Define current location</button>
+             <button class="btn btn-primary" id = "clearBtn">Clear</button>
+             <button class="btn btn-primary">Help</button>
+              </div>
+            <div class="col-1"></div>
+            <div class="col-2">
+              <img
+                src="Images/bi_umbrella-fill.svg"
+                alt=""
+                class="umbrella-icon"
+              />
+            </div>
+          </div>
+          <!--End Header-->
+          <!--Searching-->
+          <div class="searching row">
+            <form class="row">
+              <div class="col-9">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control search-input"
+                    id="inlineFormInputGroupUsername"
+                    placeholder="Lisbon"
+                   
+                  />
+                </div>
+              </div>
+              <div class="col-1"></div>
+              <div class="col-2">
+                <button type="search" class="btn btn-primary" id = "search-button">Search</button>
+              </div>
+            </form>
+          </div>
+          <!--End Searching-->
+          <!--City-->
+          <div class="row city">
+            <div class="col-12 city-name"><span id = "searching-city">Kyiv</span></br><span id = "current-date">Tuesday 16:00</span></div>
+          </div>
+          <!--EndCity-->
+          <!--Weather Current-->
+          <div class="row current-weather">
+            <div class="col-6">
+              <p class="temperature">
+                <span id = "plus">+</span><span class="temperature-value" id = "degree">17</span>&deg;<a
+                  href="#"
+                  id="celsiusDegree"
+                  >С</a
+                >|<a href="#" id="fahrenheitDegree">F</a> <br />
+                <img
+                  src="Images/fluent_weather-partly-cloudy-day-20-regular_white.svg"
+                  alt="sunny icon"
+                  class="shadowy"
+                />
+                <img
+                  src="Images/fluent_weather-blowing-snow-20-regular.svg"
+                  alt="windy icon"
+                  class="shadowy"
+                />
+              </p>
+            </div>
+            <div class="col-6">
+              <p class="phrase">
+                It's windy today! Keep calm & dont forget to grab the nearest
+                tree.
+              </p>
+            </div>
+          </div>
+          <!--End Weather Current-->
+          <!--Future Weather Block-->
+
+          <div class="row two-card">
+            <div class="col-6 card">
+              <div class="weekday">Tomorrow</div>
+              <div class="card-value">
+                +23&deg;С <br />
+                <img src="Images/bi_sun.svg" alt="" />
+              </div>
+            </div>
+            <div class="col-6 card">
+              <div class="weekday">Friday</div>
+              <div class="card-value">
+                +19&deg;С <br />
+                <img
+                  src="Images/fluent_weather-partly-cloudy-day-20-regular.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row three-card">
+            <div class="col-4 card">
+              <div class="weekday">Saturday</div>
+              <div class="card-value">
+                +23&deg;С <br />
+                <img src="Images/bi_sun.svg" alt="" />
+              </div>
+            </div>
+            <div class="col-4 card">
+              <div class="weekday">Sunday</div>
+              <div class="card-value">
+                +23&deg;С <br />
+                <img src="Images/bi_sun.svg" alt="" />
+              </div>
+            </div>
+            <div class="col-4 card">
+              <div class="weekday">Monday</div>
+              <div class="card-value">
+                +23&deg;С <br />
+                <img src="Images/bi_sun.svg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <!--End Future Weather Block-->
+          <!--Refresh button-->
+          <button class="round-button" id = "reload"></button>
+          <!--EndRefresh button-->
+          <!--Footer-->
+          <div class="footer">
+            <div class="copyright">Code&UI (c) Nataly Zhylenko 🇺🇦</div>
+            <div class="photo-copyright">Photo (с) Lyutik Nastya</div>
+          </div>
+          <!--EndFooter-->
+        </div>
+      </div>
+      <!--End Frame-->
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
